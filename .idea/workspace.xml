@@ -36,8 +36,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7e9c9c39-b1fc-49b4-832e-9af04db07431" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Practico5/Libreria.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Practico5/Libro.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
