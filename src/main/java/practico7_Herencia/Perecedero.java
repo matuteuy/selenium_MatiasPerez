@@ -1,6 +1,6 @@
 package practico7_Herencia;
 
-public class Perecedero extends Productos{
+public class Perecedero extends Producto{
 	private int caducidad;
 
 

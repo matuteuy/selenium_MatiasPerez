@@ -12,17 +12,17 @@ public class Manager extends Empleado{
 	
 	
 	
-    public String getarea(){
+    public String getArea(){
         return this.area;
     }
 
-    public void setarea(String unarea){
+    public void setArea(String unarea){
         this.area = unarea;
     }
     
     public String toString(){
 
-        return super.toString() + " Su lenguaje es " + this.getarea();
+        return super.toString() + " Su lenguaje es " + this.getArea();
 
     }
 

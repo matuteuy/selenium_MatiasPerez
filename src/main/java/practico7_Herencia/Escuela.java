@@ -7,13 +7,13 @@ public class Escuela {
 	
 	 public static void main (String args[]){
 		 Scanner input = new Scanner(System.in);
-		 ArrayList<Profesor> listaProfesores = new ArrayList<Profesor>();
-		 ArrayList<Alumno> listaAlumno = new ArrayList<Alumno>();
+		 ArrayList<Persona> listaPersonas = new ArrayList<Persona>();
 		 
-		 Alumno Alumno = new Alumno("Juan", 55555555, 5,987654);
-		 Profesor Profesor = new Profesor("Alicia", 66666666,"Biologia", 25000);
-		 listaAlumno.add(Alumno);
-		 listaProfesores.add(Profesor);
+		 Persona alumno = new Alumno("Juan", 55555555, 5,987654);
+		 Persona profe = new Profesor("Alicia", 66666666,"Biologia", 25000);
+
+		 listaPersonas.add(alumno);
+		 listaPersonas.add(profe);
 		 
 		 
 	        int opcion = 0;
@@ -45,11 +45,11 @@ public class Escuela {
 	                
 	                
 	                if (edad==0) {
-	                	Profesor Profesor1 = new Profesor(nombre, ci,materia, salario);
-	                	listaProfesores.add(Profesor1);
+	                	Persona Profesor1 = new Profesor(nombre, ci,materia, salario);
+	                	listaPersonas.add(Profesor1);
 	                }else {
-	                	Profesor Profesor1 = new Profesor(nombre, ci, edad,materia, salario);
-	                	listaProfesores.add(Profesor1);
+						Persona Profesor1 = new Profesor(nombre, ci, edad,materia, salario);
+						listaPersonas.add(Profesor1);
 	                }	                
 	                
 
@@ -68,18 +68,18 @@ public class Escuela {
 	                
 	                if (edad==0) {
 	                	Alumno Alumno1 = new Alumno(nombre, ci,nro);
-	                	listaAlumno.add(Alumno1);
+						listaPersonas.add(Alumno1);
 	                }else {
-	                	Alumno Alumno1 = new Alumno(nombre, ci, edad,nro);
-	                	listaAlumno.add(Alumno1);
+	                	Persona Alumno1 = new Alumno(nombre, ci, edad,nro);
+						listaPersonas.add(Alumno1);
 	                }	
 
 
 	            } else if (opcion == 3) {
-	                imprimirAlumnos(listaAlumno);
+	                imprimirAlumnos(listaPersonas);
 	                
 	            } else if (opcion == 4) {
-	                imprimirProfesores(listaProfesores);
+	                imprimirProfesores(listaPersonas);
 
 	            } else {
 	                System.out.println("Saliendo!! Chauuu");
@@ -90,25 +90,31 @@ public class Escuela {
 	        }
 	 }
 
-	private static void imprimirAlumnos(ArrayList<Alumno> listaAlumno) {
+	private static void imprimirAlumnos(ArrayList<Persona> listaPersonas) {
         System.out.println("******* LISTA DE Alumnos *******");
-        if (listaAlumno.isEmpty()) {
-            System.out.println("No hay alumnos en el sistema");
+        if (listaPersonas.isEmpty()) {
+            System.out.println("No hay Personas en el sistema");
         } else {
-            for (Alumno unAlumno : listaAlumno ){
-                System.out.println(unAlumno);
+            for (Persona unaPers : listaPersonas ){
+            	if (unaPers.getClass()==Alumno.class){
+					System.out.println(unaPers);
+				}
+
             }
         }
 		
 	}
 	
-	private static void imprimirProfesores(ArrayList<Profesor> listaProfesor) {
+	private static void imprimirProfesores(ArrayList<Persona> listaPersonas) {
         System.out.println("******* LISTA DE Profesores *******");
-        if (listaProfesor.isEmpty()) {
-            System.out.println("No hay profesores en el sistema");
+        if (listaPersonas.isEmpty()) {
+            System.out.println("No hay Peronas en el sistema");
         } else {
-            for (Profesor unProfe : listaProfesor ){
-                System.out.println(unProfe);
+            for (Persona unPer : listaPersonas ){
+				if (unPer.getClass()==Profesor.class){
+					System.out.println(unPer);
+				}
+
             }
         }
 		

@@ -1,6 +1,6 @@
 package practico7_Herencia;
 
-public class Productos {
+public class Producto {
     private String nombre;
     private float precio;
     
@@ -10,7 +10,7 @@ public class Productos {
 		return "Nombre= " + nombre + ", precio=" + precio;
 	}
 
-	public Productos(String nombre, float precio) {
+	public Producto(String nombre, float precio) {
 		super();
 		this.nombre = nombre;
 		this.precio = precio;

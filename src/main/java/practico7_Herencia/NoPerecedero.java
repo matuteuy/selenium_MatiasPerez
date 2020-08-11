@@ -1,6 +1,6 @@
 package practico7_Herencia;
 
-public class NoPerecedero extends Productos{
+public class NoPerecedero extends Producto{
 	 private String tipo;
 	 
 
