@@ -13,6 +13,7 @@ public class testSelenium1 {
 
         WebDriver driver = new ChromeDriver();
         driver.get("http://www.google.com");
+        //comentario
     }
 
 
